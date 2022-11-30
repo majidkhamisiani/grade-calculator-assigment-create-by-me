@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #maindiv{
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 450px;
+        text-align: center;
+        margin-left: 25%;
+        margin-top: 6%;
+        background-color: gray;
+    }
+    #secdiv{
+        margin-bottom: 4%;
+        margin-top: 4%;
+        margin-left: 10%;
+    
+    }
+    input{
+        color: white;
+        font-weight: bold;
+        border-color: rgb(194, 183, 183);
+        background-color: rgb(169, 171, 173);
+        height: 20px;
+        border-radius: 5px;
+        margin-bottom: 12%;
+        text-align: center;
+    }
+    p{
+        font-weight: bold;
+        margin-left: 2%;
+
+    }
+    h2{
+        font-weight: bold;
+        font-style: inherit;
+        text-align: center;
+        font-size: 2em;
+    }
+    #div{
+        width: 200px;
+        text-align: left;
+        font-size: larger;
+        margin-left: 2%;
+    }
+    button{
+        background-color: rgb(169, 171, 173);
+        border: 1px solid rgb(169, 171, 173);
+        padding: 5px 5px ;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+    }
+    span{
+         margin-left: 4%;
+         color: white;
+    }
+    </style>
+</head>
+<body>
+    <div id="maindiv">
+        <div style="width: 400px; font-family: Arial, Helvetica, sans-serif;  padding: 5px; display: flex; align-items: center;">
+            <div>
+                 <img src="./FB_IMG_16457956767796074.jpg" width="120px" height="120px"  alt="" style="margin-left: 5%; border-radius: 100px; padding: 5px; border: none; ">
+            </div>
+        <div style="margin-left: 15%; border: none; border-left: 2px solid black; padding-left: 5px;">
+            <p style="display: inline ; color: aqua; font-size: 2em; ;">Majid Khamisani</p><br/>
+            <p style="display: inline ;">Front-End Developer</p><br/>
+            <p style="display: inline ;"><span style="font-weight: bold; font-size: 1em; color: aqua; ">E:</span>majidkhamisani@gmail.com</p><br/>
+            <p style="display: inline ;"><span style=" font-weight: bold; font-size: 1em; color: aqua; ">P:</span>+92 336 2288948</p>
+        </div>
+        </div>
+        <div style="display: flex; ">
+            <div id="div">
+                <h2>Result</h2>
+                <p>Total:<span id="totalmarks"></span></p>
+                <p>obt:<span id="Obtmarks"></span></p>
+                <p>percentage:<span id="Percent"></span></p>
+            </div>
+            <div id="secdiv">
+                <input type="number" id="maths" placeholder="Maths"><br>
+                <input type="number" id="physics" placeholder="Physics"><br>
+                <input type="number" id="chemistry" placeholder="Chemistry"><br>
+                <input type="number" id="bio" placeholder="Biology"><br>
+                <input type="number" id="computer" placeholder="Computer"><br>
+                <button onclick="calculate()">Calculate The Result</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+      function calculate(){
+          
+          var total = 500;
+      var obt = Number(document.getElementById("maths").value)+ Number(document.getElementById("physics").value)+ Number(document.getElementById("chemistry").value)+ Number(document.getElementById("bio").value)+ Number(document.getElementById("computer").value);
+      document.getElementById("totalmarks").innerHTML = total;
+      document.getElementById("Obtmarks").innerHTML = obt;
+      var Percent = obt*100/total;
+      document.getElementById("Percent").innerHTML = Percent+"%" 
+      }
+</script>
+</html>
